@@ -1,5 +1,6 @@
 import { TbHexagonLetterR } from "react-icons/tb";
 import { NavLink, useLocation } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   let location = useLocation();
@@ -9,8 +10,8 @@ const Navbar = () => {
       <li>
         <NavLink
           to={"/"}
-          className={`hover:underline duration-150 ${
-            location.pathname == "/" ? "text-primary font-medium" : ""
+          className={`hover:underline duration-150 underline-offset-4 ${
+            location.pathname == "/" ? "underline font-medium" : ""
           }`}
         >
           Home
@@ -19,19 +20,39 @@ const Navbar = () => {
       <li>
         <NavLink
           to={"/"}
-          className={`hover:underline duration-150 ${
-            location.pathname == "/projects" ? "text-primary font-medium" : ""
+          className={`hover:underline duration-150 underline-offset-4  ${
+            location.pathname == "/projects" ? "underline font-medium" : ""
           }`}
         >
           Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/"}
+          className={`hover:underline duration-150 underline-offset-4  ${
+            location.pathname == "/projects" ? "underline font-medium" : ""
+          }`}
+        >
+          Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={"/"}
+          className={`hover:underline duration-150 underline-offset-4  ${
+            location.pathname == "/projects" ? "underline font-medium" : ""
+          }`}
+        >
+          Resume
         </NavLink>
       </li>
     </>
   );
   return (
     <>
-      <div className="border-b-black border-b-[1px] bg-background">
-        <div className="navbar container mx-auto px-2 md:px-5 lg:px-20 xl:px-28">
+      <div className="bg-primary text-white">
+        <div className="navbar container mx-auto py-3 lg:py-8 px-3 md:px-5 lg:px-20 xl:px-28">
           <div className="navbar-start">
             <div>
               <NavLink to={"/"}>
@@ -43,7 +64,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-end">
-            <ul className="hidden lg:flex text-primary font-heading text-xl tracking-wider gap-4">
+            <ul className="hidden lg:flex font-heading text-xl tracking-wider gap-12">
               {links}
             </ul>
             <div className="dropdown dropdown-end">
@@ -52,24 +73,11 @@ const Navbar = () => {
                 role="button"
                 className="btn btn-ghost lg:hidden"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                <RxHamburgerMenu className="text-2xl -mr-4" />
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="font-heading text-primary space-y-2 dropdown-content bg-background text-lg mt-3 border-primary border-[1px] z-50 p-3 shadow-xl w-56 block lg:hidden"
               >
                 {links}
               </ul>
