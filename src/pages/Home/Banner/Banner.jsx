@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-import { SlSocialSpotify } from "react-icons/sl";
 import { TbBrandGithub } from "react-icons/tb";
 import { CiLinkedin } from "react-icons/ci";
 
@@ -47,14 +46,6 @@ const Banner = () => {
                   className="font-text font-bold flex items-center gap-2 underline underline-offset-4"
                 >
                   <CiLinkedin className="text-3xl"></CiLinkedin>LinkedIn
-                </a>
-                <a
-                  href="https://open.spotify.com/user/b4k23tz8wq4lhrgv4jlc3lp2h?si=a7557d2abe3240dd"
-                  target="blank"
-                  className="font-text font-bold flex items-center gap-2 underline underline-offset-4"
-                >
-                  <SlSocialSpotify className="text-2xl"></SlSocialSpotify>
-                  Spotify
                 </a>
               </div>
               <div className="flex gap-4 font-text">
