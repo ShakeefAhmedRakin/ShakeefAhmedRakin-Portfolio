@@ -4,7 +4,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root/Root";
 import Home from "./pages/Home/Home/Home";
-import BloodBridge from "./pages/BloodBridge/BloodBridge";
+import BloodBridge from "./pages/ProjectDetails/BloodBridge/BloodBridge";
+import CompHarbor from "./pages/ProjectDetails/CompHarbor/CompHarbor";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +16,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+      // PROJECT DETAILS ROUTES
       {
         path: "/bloodbridge",
         element: <BloodBridge></BloodBridge>,
+      },
+      {
+        path: "/compharbor",
+        element: <CompHarbor></CompHarbor>,
       },
     ],
   },

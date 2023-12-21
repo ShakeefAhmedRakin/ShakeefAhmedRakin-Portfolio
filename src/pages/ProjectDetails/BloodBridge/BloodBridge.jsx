@@ -1,7 +1,7 @@
-import PageTitle from "../../Components/PageTitle";
+import PageTitle from "../../../Components/PageTitle";
 import { TbBrandGithub } from "react-icons/tb";
 import { CgBrowser } from "react-icons/cg";
-import SkillBadge from "../../Components/SkillBadge";
+import SkillBadge from "../../../Components/SkillBadge";
 
 const BloodBridge = () => {
   return (
@@ -101,8 +101,9 @@ const BloodBridge = () => {
                   blood group selection, and address details.
                 </li>
                 <li>
-                  Admin ability to block users, defaulting to an "active" status
-                  upon registration.
+                  {
+                    "Admin ability to block users, defaulting to an 'active' status upon registration."
+                  }
                 </li>
               </ul>
             </div>
@@ -233,6 +234,8 @@ const BloodBridge = () => {
                   "Stripe",
                   "jodit-react",
                   "react-share",
+                  "AOS",
+                  "React Helmet",
                 ]}
               ></SkillBadge>
             </div>
