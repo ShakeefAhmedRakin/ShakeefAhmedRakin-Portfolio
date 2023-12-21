@@ -6,6 +6,7 @@ import Root from "./Root/Root";
 import Home from "./pages/Home/Home/Home";
 import BloodBridge from "./pages/ProjectDetails/BloodBridge/BloodBridge";
 import CompHarbor from "./pages/ProjectDetails/CompHarbor/CompHarbor";
+import TopShelf from "./pages/ProjectDetails/TopShelf/TopShelf";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/compharbor",
         element: <CompHarbor></CompHarbor>,
+      },
+      {
+        path: "/topshelf",
+        element: <TopShelf></TopShelf>,
       },
     ],
   },

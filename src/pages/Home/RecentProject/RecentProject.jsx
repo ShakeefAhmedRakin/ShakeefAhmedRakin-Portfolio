@@ -15,7 +15,7 @@ const RecentProject = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* PROJECT  */}
           <Link to={"/bloodbridge"}>
-            <div className="relative group shadow-xl">
+            <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#d70427] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
                   <BiDonateBlood className="text-4xl text-background"></BiDonateBlood>
@@ -42,7 +42,7 @@ const RecentProject = () => {
           </Link>
           {/* PROJECT  */}
           <Link to={"/compharbor"}>
-            <div className="relative group shadow-xl">
+            <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#38529E] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
                   <h1 className="font-heading text-xl md:text-4xl font-semibold flex items-center gap-x-1">
@@ -68,30 +68,32 @@ const RecentProject = () => {
             </div>
           </Link>
           {/* PROJECT  */}
-          <div className="relative group shadow-xl">
-            <div className="aspect-video w-full rounded-2xl overflow-hidden">
-              <div className="text-background bg-[#F05454] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
-                <ImBooks className="text-4xl"></ImBooks>
-                <h1 className="font-heading text-xl md:text-4xl font-semibold">
-                  TopShelf
-                </h1>
-              </div>
-              <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl duration-300 flex items-center justify-center flex-col cursor-pointer">
-                <p className="text-white text-xs lg:text-base font-text text-center font-medium">
-                  Online Library Website
-                </p>
-                <div className="mt-2 mb-6">
-                  <span className="badge badge-sm lg:badge-md font-text font-bold">
-                    MERN
-                  </span>
+          <Link to={"/topshelf"}>
+            <div className="relative group shadow-xl rounded-2xl">
+              <div className="aspect-video w-full rounded-2xl overflow-hidden">
+                <div className="text-background bg-[#F05454] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
+                  <ImBooks className="text-4xl"></ImBooks>
+                  <h1 className="font-heading text-xl md:text-4xl font-semibold">
+                    TopShelf
+                  </h1>
                 </div>
-                <button className="btn btn-sm lg:btn-md bg-transparent font-text text-background hover:bg-background hover:text-primary">
-                  Project Details
-                  <MdChevronRight className="text-xl"></MdChevronRight>
-                </button>
+                <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl duration-300 flex items-center justify-center flex-col cursor-pointer">
+                  <p className="text-white text-xs lg:text-base font-text text-center font-medium">
+                    Online Library Website
+                  </p>
+                  <div className="mt-2 mb-6">
+                    <span className="badge badge-sm lg:badge-md font-text font-bold">
+                      MERN
+                    </span>
+                  </div>
+                  <button className="btn btn-sm lg:btn-md bg-transparent font-text text-background hover:bg-background hover:text-primary">
+                    Project Details
+                    <MdChevronRight className="text-xl"></MdChevronRight>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="flex justify-center mt-10">

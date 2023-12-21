@@ -5,7 +5,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { LiaUniversitySolid } from "react-icons/lia";
 import { RiSchoolLine } from "react-icons/ri";
-import { SlSocialSteam, SlSocialSpotify } from "react-icons/sl";
+import { SlSocialSpotify } from "react-icons/sl";
 
 const AboutEducation = () => {
   return (
@@ -20,15 +20,9 @@ const AboutEducation = () => {
         {/* ABOUT DESC */}
         <div>
           <p className="font-text text-sm lg:text-base mb-5">
-            Nice to meet you. I'm Rakin! Enthusiastic about coding and crafting
-            digital experiences, I find my passion in the lines of code that
-            bring ideas to life. When I'm not immersed in development projects,
-            you'll likely find me with headphones on, exploring new music genres
-            to inspire my work or binging anime shows. Also, I love gaming as it
-            has always been an integral part of my life. It's where I indulge in
-            both interactive and competitive worlds that often fuel my creative
-            approach to problem-solving. Welcome to my corner of code and
-            creativity!
+            {
+              "Nice to meet you. I'm Rakin! Enthusiastic about coding and crafting digital experiences, I find my passion in the lines of code that bring ideas to life. When I'm not immersed in development projects, you'll likely find me with headphones on, exploring new music genres to inspire my work or binging anime shows. Also, I love gaming as it has always been an integral part of my life. It's where I indulge in both interactive and competitive worlds that often fuel my creative approach to problem-solving. Welcome to my corner of code and creativity!"
+            }
           </p>
           <p className="font-text text-sm lg:text-base mb-5">
             Being an{" "}
@@ -91,8 +85,9 @@ const AboutEducation = () => {
             </div>
           </div>
           <p className="font-text text-sm lg:text-base mb-3">
-            I believe exploring a person's taste in music reveals a lot about
-            them.
+            {
+              "I believe exploring a person's taste in music reveals a lot about them."
+            }
           </p>
           <div className="flex items-center gap-2 font-text text-sm lg:text-base">
             Explore my favorite tunes.
