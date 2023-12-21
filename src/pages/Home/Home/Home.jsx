@@ -1,8 +1,9 @@
 import AboutEducation from "../AboutEducation/AboutEducation";
 import Banner from "../Banner/Banner";
+import Experience from "../Experience/Experience";
 import RecentProject from "../RecentProject/RecentProject";
 import Skills from "../Skills/Skills";
-import Work from "../Work/Work";
+import GetInTouch from "../GetInTouch/GetInTouch";
 
 const Home = () => {
   return (
@@ -17,8 +18,11 @@ const Home = () => {
       <div className="mb-10">
         <RecentProject></RecentProject>
       </div>
-      <div className="mb-10 hidden">
-        <Work></Work>
+      <div className="mb-10">
+        <Experience></Experience>
+      </div>
+      <div className="mb-10">
+        <GetInTouch></GetInTouch>
       </div>
     </>
   );

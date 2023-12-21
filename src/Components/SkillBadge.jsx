@@ -4,7 +4,7 @@ const SkillBadge = ({ skills }) => {
       {skills.map((skill) => (
         <span
           key={skill}
-          className="badge border-none text-background bg-primary font-medium p-3"
+          className="badge badge-sm md:badge-md border-none text-background bg-primary font-medium p-2 md:p-3"
         >
           {skill}
         </span>

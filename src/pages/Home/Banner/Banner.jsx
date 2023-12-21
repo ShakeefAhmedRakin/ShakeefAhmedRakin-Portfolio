@@ -5,7 +5,7 @@ import { CiLinkedin } from "react-icons/ci";
 const Banner = () => {
   return (
     <>
-      <div className="bg-primary py-24 md:py-36">
+      <div className="bg-primary py-24 md:py-36 shadow-xl">
         <div className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28">
           <div className="flex flex-col-reverse md:flex-row justify-between gap-x-5 gap-y-10">
             <div className="text-background space-y-5 flex-1">
