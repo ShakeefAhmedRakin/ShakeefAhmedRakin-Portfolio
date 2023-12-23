@@ -10,7 +10,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to={"/"}
-          className={`hover:underline duration-150 underline-offset-4 ${
+          className={`hover:underline duration-300 underline-offset-4 ${
             location.pathname == "/" ? "underline font-medium" : ""
           }`}
         >
@@ -19,8 +19,8 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/"}
-          className={`hover:underline duration-150 underline-offset-4  ${
+          to={"/projects"}
+          className={`hover:underline duration-300 underline-offset-4  ${
             location.pathname == "/projects" ? "underline font-medium" : ""
           }`}
         >
@@ -29,23 +29,23 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/"}
-          className={`hover:underline duration-150 underline-offset-4  ${
-            location.pathname == "/projects" ? "underline font-medium" : ""
+          to={"/contact"}
+          className={`hover:underline duration-300 underline-offset-4  ${
+            location.pathname == "/contact" ? "underline font-medium" : ""
           }`}
         >
           Contact
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={"/"}
-          className={`hover:underline duration-150 underline-offset-4  ${
-            location.pathname == "/projects" ? "underline font-medium" : ""
-          }`}
+        <a
+          href="https://drive.google.com/file/d/1ZtBDYbnqmdLg7ttgyI9OA7JDtnbJ5dRT/view?usp=drive_link"
+          target="_blank"
+          className={`hover:underline duration-300 underline-offset-4`}
+          rel="noopener noreferrer"
         >
           Resume
-        </NavLink>
+        </a>
       </li>
     </>
   );

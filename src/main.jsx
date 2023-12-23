@@ -7,6 +7,8 @@ import Home from "./pages/Home/Home/Home";
 import BloodBridge from "./pages/ProjectDetails/BloodBridge/BloodBridge";
 import CompHarbor from "./pages/ProjectDetails/CompHarbor/CompHarbor";
 import TopShelf from "./pages/ProjectDetails/TopShelf/TopShelf";
+import Contact from "./pages/Contact/Contact";
+import AllProjects from "./pages/AllProjects/AllProjects";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/projects",
+        element: <AllProjects></AllProjects>,
       },
       // PROJECT DETAILS ROUTES
       {

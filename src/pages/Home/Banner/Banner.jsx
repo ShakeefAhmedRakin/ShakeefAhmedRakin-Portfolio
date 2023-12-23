@@ -1,8 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
 import { TbBrandGithub } from "react-icons/tb";
 import { CiLinkedin } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const nagivate = useNavigate();
   return (
     <>
       <div className="bg-primary py-24 md:py-36 shadow-xl">
@@ -49,12 +51,20 @@ const Banner = () => {
                 </a>
               </div>
               <div className="flex gap-4 font-text">
-                <button className="btn border-background bg-transparent text-background hover:text-primary hover:bg-background">
+                <button
+                  onClick={() => nagivate("/contact")}
+                  className="btn border-background bg-transparent text-background hover:text-primary hover:bg-background"
+                >
                   Get in touch
                 </button>
-                <button className="btn border-none bg-background text-primary">
-                  Curriculum Vitae
-                </button>
+                <a
+                  className="btn border-none bg-background text-primary"
+                  href="https://drive.google.com/file/d/1ZtBDYbnqmdLg7ttgyI9OA7JDtnbJ5dRT/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
               </div>
             </div>
             <div className="flex-1 flex justify-center items-center">
