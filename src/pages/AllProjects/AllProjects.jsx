@@ -12,7 +12,7 @@ const AllProjects = () => {
       <div className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28 flex flex-col min-h-screen py-10 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* PROJECT  */}
-          <Link to={"/bloodbridge"}>
+          <Link to={"/bloodbridge"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#d70427] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
@@ -39,7 +39,7 @@ const AllProjects = () => {
             </div>
           </Link>
           {/* PROJECT  */}
-          <Link to={"/compharbor"}>
+          <Link to={"/compharbor"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#38529E] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
@@ -66,7 +66,7 @@ const AllProjects = () => {
             </div>
           </Link>
           {/* PROJECT  */}
-          <Link to={"/topshelf"}>
+          <Link to={"/topshelf"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#F05454] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">

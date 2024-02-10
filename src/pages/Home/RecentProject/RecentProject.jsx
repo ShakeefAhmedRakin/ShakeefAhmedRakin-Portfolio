@@ -14,7 +14,7 @@ const RecentProject = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* PROJECT  */}
-          <Link to={"/bloodbridge"}>
+          <Link to={"/bloodbridge"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#d70427] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
@@ -41,7 +41,7 @@ const RecentProject = () => {
             </div>
           </Link>
           {/* PROJECT  */}
-          <Link to={"/compharbor"}>
+          <Link to={"/compharbor"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#38529E] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
@@ -68,7 +68,7 @@ const RecentProject = () => {
             </div>
           </Link>
           {/* PROJECT  */}
-          <Link to={"/topshelf"}>
+          <Link to={"/topshelf"} className="rounded-2xl">
             <div className="relative group shadow-xl rounded-2xl">
               <div className="aspect-video w-full rounded-2xl overflow-hidden">
                 <div className="text-background bg-[#F05454] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
@@ -97,7 +97,10 @@ const RecentProject = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Link className="btn font-text border-primary bg-transparent text-primary hover:text-background hover:bg-primary">
+          <Link
+            to={"/projects"}
+            className="btn font-text border-primary bg-transparent text-primary hover:text-background hover:bg-primary"
+          >
             View All Projects
           </Link>
         </div>

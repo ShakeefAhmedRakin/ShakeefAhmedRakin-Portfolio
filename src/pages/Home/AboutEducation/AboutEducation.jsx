@@ -12,13 +12,15 @@ const AboutEducation = () => {
     <div className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28 flex flex-col md:flex-row gap-x-5 gap-y-8">
       {/* ABOUT ME */}
       <div className="flex-1">
-        <p className="text-secondary font-text text-sm">Introduction</p>
-        <h1 className="font-heading font-bold text-lg md:text-xl lg:text-4xl tracking-[4px]">
-          ABOUT ME
-        </h1>
-        <hr className="mt-1 mb-5" />
+        <div data-aos="fade-right">
+          <p className="text-secondary font-text text-sm">Introduction</p>
+          <h1 className="font-heading font-bold text-lg md:text-xl lg:text-4xl tracking-[4px]">
+            ABOUT ME
+          </h1>
+          <hr className="mt-1 mb-5" />
+        </div>
         {/* ABOUT DESC */}
-        <div>
+        <div data-aos="fade-right">
           <p className="font-text text-sm lg:text-base mb-5">
             {
               "Nice to meet you. I'm Rakin! Enthusiastic about coding and crafting digital experiences, I find my passion in the lines of code that bring ideas to life. When I'm not immersed in development projects, you'll likely find me with headphones on, exploring new music genres to inspire my work or binging anime shows. Also, I love gaming as it has always been an integral part of my life. It's where I indulge in both interactive and competitive worlds that often fuel my creative approach to problem-solving. Welcome to my corner of code and creativity!"
@@ -29,7 +31,8 @@ const AboutEducation = () => {
             <a
               href="https://www.16personalities.com/infj-personality"
               className="link font-bold"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               INFJ
             </a>
@@ -42,58 +45,107 @@ const AboutEducation = () => {
         </div>
         {/* INTERESTS */}
         <div className="mb-5">
-          <h1 className="font-heading font-bold text-lg md:text-xl lg:text-2xl tracking-[1px]">
-            My Interests
-          </h1>
-          <hr className="my-1 mb-3" />
+          <div data-aos="fade-right">
+            <h1 className="font-heading font-bold text-lg md:text-xl lg:text-2xl tracking-[1px]">
+              My Interests
+            </h1>
+            <hr className="my-1 mb-3" />
+          </div>
           <div className="flex flex-wrap gap-1">
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2">
+            <div
+              className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2"
+              data-aos="fade-right"
+              data-aos-delay="50"
+            >
               Gaming
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="100"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2"
+            >
               Anime
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="150"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2"
+            >
               Coding
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-primary border-primary font-medium p-2"
+            >
               Music
             </div>
           </div>
         </div>
         {/* MUSIC */}
         <div>
-          <h1 className="font-heading font-bold text-lg md:text-xl lg:text-2xl tracking-[1px]">
-            My Music Taste
-          </h1>
-          <hr className="my-1 mb-3" />
+          <div data-aos="fade-right">
+            <h1 className="font-heading font-bold text-lg md:text-xl lg:text-2xl tracking-[1px]">
+              My Music Taste
+            </h1>
+            <hr className="my-1 mb-3" />
+          </div>
           <div className="flex flex-wrap gap-1 mb-3 max-w-xs">
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="50"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2"
+            >
               Retro
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="100"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2"
+            >
               JPOP
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="150"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2"
+            >
               Synthwave
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2"
+            >
               Breakcore
             </div>
-            <div className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="250"
+              className="badge badge-xs md:badge-md md:p-3 font-text text-background border-primary bg-primary font-medium p-2"
+            >
               EDM
             </div>
           </div>
-          <p className="font-text text-sm lg:text-base mb-3">
+          <p
+            className="font-text text-sm lg:text-base mb-3"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             {
               "I believe exploring a person's taste in music reveals a lot about them."
             }
           </p>
-          <div className="flex items-center gap-2 font-text text-sm lg:text-base">
+          <div
+            className="flex items-center gap-2 font-text text-sm lg:text-base"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             Explore my favorite tunes.
             <a
               href="https://open.spotify.com/user/b4k23tz8wq4lhrgv4jlc3lp2h?si=a7557d2abe3240dd"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-text font-bold flex items-center gap-2 underline underline-offset-4"
             >
               <SlSocialSpotify className="text-2xl"></SlSocialSpotify>
@@ -103,7 +155,7 @@ const AboutEducation = () => {
         </div>
       </div>
       {/* EDUCATION */}
-      <div className="flex-1">
+      <div className="flex-1" data-aos="fade-up">
         <p className="text-left lg:text-right text-secondary font-text text-sm">
           Background
         </p>
