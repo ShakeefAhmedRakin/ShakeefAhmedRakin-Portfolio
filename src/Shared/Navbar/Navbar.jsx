@@ -1,91 +1,159 @@
 import { TbHexagonLetterR } from "react-icons/tb";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaCircle, FaTimes } from "react-icons/fa";
+import { useRef, useEffect, useState } from "react";
+import { GrDocumentText } from "react-icons/gr";
 
 const Navbar = () => {
-  let location = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const scrollSectionRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const scrollToSectionID = (id) => {
+    scrollSectionRef.current = id;
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      scrollToSection();
+    }
+    setDropdownOpen(false);
+  };
+
+  const scrollToSection = () => {
+    const sectionID = document.getElementById(scrollSectionRef.current);
+    if (sectionID) {
+      sectionID.scrollIntoView({ behavior: "smooth" });
+      scrollSectionRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    if (location.pathname === "/" && scrollSectionRef.current) {
+      scrollToSection();
+    }
+  }, [location.pathname]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const links = (
     <>
+      {[
+        "about",
+        "education",
+        "skills",
+        "career",
+        "projects",
+        "achievements",
+        "publications",
+        "contact",
+      ].map((section) => (
+        <li key={section}>
+          <button
+            onClick={() => scrollToSectionID(section)}
+            className="font-semibold hover:text-primary duration-300"
+            aria-label={`Scroll to ${
+              section.charAt(0).toUpperCase() + section.slice(1)
+            }`}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </button>
+        </li>
+      ))}
       <li>
-        <NavLink
-          to={"/"}
-          className={`hover:underline duration-300 underline-offset-4 ${
-            location.pathname == "/" ? "underline font-medium" : ""
-          }`}
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/projects"}
-          className={`hover:underline duration-300 underline-offset-4  ${
-            location.pathname == "/projects" ? "underline font-medium" : ""
-          }`}
-        >
-          Projects
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to={"/contact"}
-          className={`hover:underline duration-300 underline-offset-4  ${
-            location.pathname == "/contact" ? "underline font-medium" : ""
-          }`}
-        >
-          Contact
-        </NavLink>
-      </li>
-      <li>
-        <a
-          href="https://drive.google.com/file/d/1ZtBDYbnqmdLg7ttgyI9OA7JDtnbJ5dRT/view?usp=drive_link"
-          target="_blank"
-          className={`hover:underline duration-300 underline-offset-4`}
-          rel="noopener noreferrer"
+        <button
+          onClick={() => {
+            navigate("/resume");
+            setDropdownOpen(false);
+          }}
+          className="font-bold text-primary duration-300"
+          aria-label="Navigate to Resume"
         >
           Resume
-        </a>
+        </button>
       </li>
     </>
   );
+
   return (
-    <>
-      <div className="bg-primary text-white">
-        <div className="navbar container mx-auto py-3 lg:py-8 px-3 md:px-5 lg:px-20 xl:px-28">
-          <div className="navbar-start">
-            <div>
-              <NavLink to={"/"}>
-                <h1 className="whitespace-nowrap font-heading text-2xl md:text-3xl tracking-[9px] hover:tracking-[12px] duration-300 flex items-center gap-2">
-                  <TbHexagonLetterR></TbHexagonLetterR>
-                  RAKIN
-                </h1>
-              </NavLink>
-            </div>
-          </div>
-          <div className="navbar-end">
-            <ul className="hidden lg:flex font-heading text-xl tracking-wider gap-12">
+    <nav
+      className="bg-background text-black my-8 py-2 relative"
+      aria-label="Main Navigation"
+    >
+      <h1
+        className="absolute -top-[25px] left-2 text-xl flex gap-1 text-background"
+        aria-hidden="true"
+      >
+        <FaCircle />
+        <FaCircle />
+        <FaCircle />
+      </h1>
+      <h1
+        className="absolute -bottom-[25px] right-2 text-xl flex gap-1 text-background"
+        aria-hidden="true"
+      >
+        <FaCircle />
+        <FaCircle />
+        <FaCircle />
+      </h1>
+      <div className="navbar container mx-auto py-3 lg:py-8 px-3 md:px-5 lg:px-20 xl:px-28">
+        <div className="navbar-start">
+          <NavLink to={"/"} className={`hidden lg:flex`}>
+            <h1 className="text-[54px] hover:scale-[1.2] duration-300 text-primary">
+              <TbHexagonLetterR />
+            </h1>
+          </NavLink>
+        </div>
+        <div className="navbar-center">
+          <NavLink to={"/"} className={`lg:hidden`}>
+            <h1 className="text-[54px] hover:scale-[1.2] duration-300 text-primary">
+              <TbHexagonLetterR />
+            </h1>
+          </NavLink>
+        </div>
+        <div className="navbar-end">
+          <ul className="hidden lg:flex font-text gap-4 text-sm xl:gap-6 xl:text-base">
+            {links}
+          </ul>
+          <div className="lg:hidden relative" ref={dropdownRef}>
+            <button
+              className="btn btn-ghost"
+              onClick={() => setDropdownOpen((prev) => !prev)}
+              aria-label={dropdownOpen ? "Close menu" : "Open menu"}
+            >
+              {dropdownOpen ? (
+                <FaTimes className="text-2xl text-black" />
+              ) : (
+                <RxHamburgerMenu className="text-2xl text-black" />
+              )}
+            </button>
+            <ul
+              className={`dropdown-content bg-background bg-opacity-95 p-4 shadow-lg w-screen -right-3 text-center flex flex-col items-center gap-3 absolute z-50 transition-opacity duration-300 transform ${
+                dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+              role="menu"
+              aria-hidden={!dropdownOpen}
+            >
               {links}
             </ul>
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-              >
-                <RxHamburgerMenu className="text-2xl -mr-4" />
-              </div>
-              <ul
-                tabIndex={0}
-                className="font-heading text-primary space-y-2 dropdown-content bg-background text-lg mt-3 border-primary border-[1px] z-50 p-3 shadow-xl w-56 block lg:hidden"
-              >
-                {links}
-              </ul>
-            </div>
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 };
 

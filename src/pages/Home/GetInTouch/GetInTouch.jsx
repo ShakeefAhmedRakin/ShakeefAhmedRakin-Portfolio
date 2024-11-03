@@ -2,15 +2,21 @@ import ContactMe from "../../../Components/ContactMe";
 
 const GetInTouch = () => {
   return (
-    <>
-      <div className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28">
-        <p className="text-secondary text-center font-text text-sm">Contact</p>
-        <h1 className="text-primary text-center font-heading font-bold text-2xl lg:text-5xl tracking-[1px] mb-10">
-          GET IN TOUCH
-        </h1>
-        <ContactMe></ContactMe>
-      </div>
-    </>
+    <section
+      className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28"
+      aria-labelledby="get-in-touch-title"
+    >
+      <h1
+        id="get-in-touch-title"
+        data-aos="fade-down"
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-text font-head text-center mb-14"
+        role="heading"
+        aria-level="1"
+      >
+        Get In Touch<span className="text-primary">.</span>
+      </h1>
+      <ContactMe />
+    </section>
   );
 };
 

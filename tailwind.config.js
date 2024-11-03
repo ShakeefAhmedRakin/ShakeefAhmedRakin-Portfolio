@@ -4,16 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        text: "#22262a",
-        background: "#f9fafb",
-        primary: "#1A1A1C",
-        secondary: "#adb5bd",
-        accent: "#484f56",
-        textDark: "#d5d9dd",
-        backgroundDark: "#040506",
-        primaryDark: "#d5d9dd",
-        secondaryDark: "#424a52",
-        accentDark: "#a9b0b7",
+        text: "#292929",
+        "text-white": "#FFFFFF",
+        background: "#F4F4F4",
+        section: "#fcfcfc",
+        primary: "#0054D2",
+        secondary: "#21212",
+        accent: "#F5F6FA",
       },
       fontFamily: {
         heading: ["Barlow Condensed", "sans-serif"],

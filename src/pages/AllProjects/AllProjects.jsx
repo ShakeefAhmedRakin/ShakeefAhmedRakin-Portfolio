@@ -1,97 +1,80 @@
-import PageTitle from "../../Components/PageTitle";
-import { BiDonateBlood } from "react-icons/bi";
-import { MdChevronRight } from "react-icons/md";
-import { PiComputerTowerBold } from "react-icons/pi";
-import { ImBooks } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+import { SiFuturelearn } from "react-icons/si";
+import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 const AllProjects = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <PageTitle subtitle={"Projects"} title={"All"}></PageTitle>
       <div className="container mx-auto px-3 md:px-5 lg:px-20 xl:px-28 flex flex-col min-h-screen py-10 md:py-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {/* PROJECT  */}
-          <Link to={"/bloodbridge"} className="rounded-2xl">
-            <div className="relative group shadow-xl rounded-2xl">
-              <div className="aspect-video w-full rounded-2xl overflow-hidden">
-                <div className="text-background bg-[#d70427] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
-                  <BiDonateBlood className="text-4xl text-background"></BiDonateBlood>
-                  <h1 className="font-heading text-xl md:text-4xl font-semibold">
-                    BloodBridge
-                  </h1>
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl duration-300 flex items-center justify-center flex-col cursor-pointer">
-                  <p className="text-white text-xs lg:text-base font-text text-center font-medium">
-                    Blood Donation Website
-                  </p>
-                  <div className="mt-2 mb-6">
-                    <span className="badge badge-sm lg:badge-md font-text font-bold">
-                      MERN
-                    </span>
-                  </div>
-                  <button className="btn btn-sm lg:btn-md bg-transparent font-text text-background hover:bg-background hover:text-primary">
-                    Project Details
-                    <MdChevronRight className="text-xl"></MdChevronRight>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </Link>
-          {/* PROJECT  */}
-          <Link to={"/compharbor"} className="rounded-2xl">
-            <div className="relative group shadow-xl rounded-2xl">
-              <div className="aspect-video w-full rounded-2xl overflow-hidden">
-                <div className="text-background bg-[#38529E] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
-                  <h1 className="font-heading text-xl md:text-4xl font-semibold flex items-center gap-x-1">
-                    <PiComputerTowerBold className="text-4xl"></PiComputerTowerBold>
-                    Comp Harbor
-                  </h1>
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl duration-300 flex items-center justify-center flex-col cursor-pointer">
-                  <p className="text-white text-xs lg:text-base font-text text-center font-medium">
-                    Tech E-Commerce Website
-                  </p>
-                  <div className="mt-2 mb-6">
-                    <span className="badge badge-sm lg:badge-md font-text font-bold">
-                      MERN
-                    </span>
-                  </div>
-                  <button className="btn btn-sm lg:btn-md bg-transparent font-text text-background hover:bg-background hover:text-primary">
-                    Project Details
-                    <MdChevronRight className="text-xl"></MdChevronRight>
-                  </button>
+        <div>
+          <h1
+            className="text-text font-bold text-base md:text-2xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Project Categories
+          </h1>
+          {/* PROJECT CATEGORY CARDS */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+            {/* WEB DEVELOPMENT */}
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div
+                className="flex flex-col h-full gap-3 card card-body shadow-md relative group bg-white hover:bg-primary hover:shadow-2xl duration-500 cursor-pointer"
+                onClick={() => navigate("/projects/webdev")}
+              >
+                <CgWebsite className="text-primary group-hover:text-background duration-500 text-6xl"></CgWebsite>
+                <h1 className="font-bold group-hover:text-background duration-500 text-sm lg:text-base">
+                  Web Development
+                </h1>
+                <p className="text-xs lg:text-sm mb-6 group-hover:text-background duration-500">
+                  Projects focused on full-stack web development, featuring
+                  backend architectures, responsive frontends, and AI
+                  implementations.
+                </p>
+                <div className="absolute bottom-5 right-5 text-text group-hover:text-background">
+                  <FaArrowRight></FaArrowRight>
                 </div>
               </div>
             </div>
-          </Link>
-          {/* PROJECT  */}
-          <Link to={"/topshelf"} className="rounded-2xl">
-            <div className="relative group shadow-xl rounded-2xl">
-              <div className="aspect-video w-full rounded-2xl overflow-hidden">
-                <div className="text-background bg-[#F05454] flex items-center gap-1 py-8 rounded-2xl justify-center h-full">
-                  <ImBooks className="text-4xl"></ImBooks>
-                  <h1 className="font-heading text-xl md:text-4xl font-semibold">
-                    TopShelf
-                  </h1>
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl duration-300 flex items-center justify-center flex-col cursor-pointer">
-                  <p className="text-white text-xs lg:text-base font-text text-center font-medium">
-                    Online Library Website
-                  </p>
-                  <div className="mt-2 mb-6">
-                    <span className="badge badge-sm lg:badge-md font-text font-bold">
-                      MERN
-                    </span>
-                  </div>
-                  <button className="btn btn-sm lg:btn-md bg-transparent font-text text-background hover:bg-background hover:text-primary">
-                    Project Details
-                    <MdChevronRight className="text-xl"></MdChevronRight>
-                  </button>
+            {/* MACHINE LEARNING */}
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div
+                className="flex flex-col h-full gap-3 card card-body shadow-md relative group bg-white hover:bg-primary hover:shadow-2xl duration-500 cursor-pointer"
+                onClick={() => navigate("/projects/machinelearning")}
+              >
+                <SiFuturelearn className="text-primary group-hover:text-background duration-500 text-6xl"></SiFuturelearn>
+                <h1 className="font-bold group-hover:text-background duration-500 text-sm lg:text-base">
+                  AI & Machine Learning
+                </h1>
+                <p className="text-xs lg:text-sm mb-6 group-hover:text-background duration-500">
+                  Projects including predictive modeling, natural language
+                  processing, and computer vision.
+                </p>
+                <div className="absolute bottom-5 right-5 text-text group-hover:text-background">
+                  <FaArrowRight></FaArrowRight>
                 </div>
               </div>
             </div>
-          </Link>
+            {/* MISC */}
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div className="flex flex-col h-full gap-3 card card-body shadow-md relative group bg-white hover:bg-primary hover:shadow-2xl duration-500 cursor-pointer">
+                <GiPerspectiveDiceSixFacesRandom className="text-primary group-hover:text-background duration-500 text-6xl"></GiPerspectiveDiceSixFacesRandom>
+                <h1 className="font-bold group-hover:text-background duration-500 text-sm lg:text-base">
+                  Miscellaneous
+                </h1>
+                <p className="text-xs lg:text-sm mb-6 group-hover:text-background duration-500">
+                  Projects spanning diverse domains, including utility tools,
+                  experimental applications and side projects.
+                </p>
+                <div className="absolute bottom-5 right-5 text-text group-hover:text-background">
+                  <FaArrowRight></FaArrowRight>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -35,7 +35,8 @@ const ContactMe = () => {
   return (
     <>
       <div className="flex flex-col gap-x-5 gap-y-10 md:flex-row">
-        <div className="flex-1 font-text">
+        {/* Left Section */}
+        <div className="flex-1 font-text" data-aos="fade-up">
           <h1 className="pl-6 mb-3 font-bold text-lg md:text-xl lg:text-2xl">
             Reach me!
           </h1>
@@ -74,7 +75,12 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 border-l-4 border-primary pl-6">
+
+        {/* Right Section (Form) */}
+        <div
+          className="flex-1 border-l-4 border-primary pl-6"
+          data-aos="fade-down" // AOS animation
+        >
           <form ref={form} onSubmit={sendEmail} className="space-y-8 font-text">
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
